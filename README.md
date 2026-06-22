@@ -1,16 +1,99 @@
-# React + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Task Management web application built using **React, Node.js, Express, Prisma, and PostgreSQL**.  
+It allows users to register, log in, and manage tasks with full CRUD functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- User Registration & Login (basic auth)
+- Create, Read, Update, Delete Tasks
+- Toggle task completion status
+- Search tasks by title
+- Filter tasks (All / Active / Completed)
+- Dashboard with task statistics
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
+### Requirements:
 
-## Expanding the ESLint configuration
+Make sure you have installed:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (v18+ recommended)
+- PostgreSQL
+- npm or yarn
+
+---
+
+## Tech Stack
+
+### Frontend
+- React (Vite)
+- TailwindCSS
+
+### Backend
+- Node.js
+- Express.js
+- Prisma ORM
+- PostgreSQL
+
+---
+
+## Installation Guide
+
+# 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/task-manager.git
+cd task-manager
+
+# 2. Setup Backend
+
+cd server
+npm install
+
+# 3. Setup Environment Variables
+
+Create a .env file inside /server
+
+DATABASE_URL="postgresql://username:password@localhost:5432/taskmanager"
+
+**Make sure PostgreSQL is installed and running locally.**
+
+# 4. Setup Database (Prisma)
+
+Run migrations:
+
+npx prisma generate
+npx prisma migrate dev --name init
+
+(Optional)
+npx prisma studio
+Prisma Studio can be used to see database data more clearly.
+
+# 5. Start Backend Server
+
+npm run dev
+
+**Backend runs at:**
+http://localhost:3000
+
+---
+
+## Frontend Setup
+
+# 6. Install Dependencies
+
+cd client
+npm install
+
+# 6. Start Frontend
+
+npm run dev
+
+**Frontend runs at:**
+
+http://localhost:5173
+
+
+
