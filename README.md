@@ -39,30 +39,33 @@ Make sure you have installed:
 
 ---
 
-## Installation Guide
+# Installation Guide
 
-# 1. Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 ```
 
-# 2. Setup Backend
+## 2. Setup Backend
 
 ```bash
 cd server
 npm install
 ```
 
-# 3. Setup Environment Variables
+## 3. Setup Environment Variables
 
 Create a .env file inside /server
+
+```javascript
 DATABASE_URL="postgresql://username:password@localhost:5432/database-name"
+```
 
 **Make sure PostgreSQL is installed and running locally.**
 
-# 4. Setup Database (Prisma)
+## 4. Setup Database (Prisma)
 
 Run migrations:
 ```bash
@@ -76,7 +79,7 @@ npx prisma studio
 ```
 You can use Prisma Studio to view and manage your database data in a more visual and user-friendly way.
 
-# 5. Start Backend Server
+## 5. Start Backend Server
 
 ```bash
 npm run dev
@@ -87,16 +90,16 @@ http://localhost:3000
 
 ---
 
-## Frontend Setup
+# Frontend Setup
 
-# 6. Install Dependencies
+## 6. Install Dependencies
 
 ```bash
 cd client
 npm install
 ```
 
-# 6. Start Frontend
+## 7. Start Frontend
 
 ```bash
 npm run dev
@@ -106,26 +109,25 @@ npm run dev
 
 http://localhost:5173
 
-## Troubleshooting
+# Troubleshooting
 
-# Database connection error
+## Database connection error
 
 Check .env DATABASE_URL
 
-# Prisma Client not generated
+## Prisma Client not generated
 
 ```bash
 npx prisma generate
 ```
 
-# Port already in use
+## Port already in use
 
 Change backend port in server.js
 
 ```javascript
 const PORT = 3001;
 ```
-adasdsadeef 
 
 
 
