@@ -46,34 +46,41 @@ Make sure you have installed:
 ```bash
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
+```
 
 # 2. Setup Backend
 
+```bash
 cd server
 npm install
+```
 
 # 3. Setup Environment Variables
 
 Create a .env file inside /server
-
-DATABASE_URL="postgresql://username:password@localhost:5432/taskmanager"
+DATABASE_URL="postgresql://username:password@localhost:5432/database-name"
 
 **Make sure PostgreSQL is installed and running locally.**
 
 # 4. Setup Database (Prisma)
 
 Run migrations:
-
+```bash
 npx prisma generate
 npx prisma migrate dev --name init
+```
 
 (Optional)
+```bash
 npx prisma studio
-Prisma Studio can be used to see database data more clearly.
+```
+You can use Prisma Studio to view and manage your database data in a more visual and user-friendly way.
 
 # 5. Start Backend Server
 
+```bash
 npm run dev
+```
 
 **Backend runs at:**
 http://localhost:3000
@@ -84,16 +91,41 @@ http://localhost:3000
 
 # 6. Install Dependencies
 
+```bash
 cd client
 npm install
+```
 
 # 6. Start Frontend
 
+```bash
 npm run dev
+```
 
 **Frontend runs at:**
 
 http://localhost:5173
+
+## Troubleshooting
+
+# Database connection error
+
+Check .env DATABASE_URL
+
+# Prisma Client not generated
+
+```bash
+npx prisma generate
+```
+
+# Port already in use
+
+Change backend port in server.js
+
+```javascript
+const PORT = 3001;
+```
+adasdsadeef 
 
 
 
