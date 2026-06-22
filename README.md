@@ -107,7 +107,10 @@ npm run dev
 
 **Frontend runs at:**
 
+```bash
 http://localhost:5173
+```
+---
 
 # Troubleshooting
 
